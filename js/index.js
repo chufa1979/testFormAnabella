@@ -89,21 +89,34 @@ $(document).ready(function () {
                     formData.append('firstname', $("#firstname").val());
                     formData.append('phone', $("#phone").val());
                     formData.append('email', $("#email").val());
-                    // Attach file
-                    $.ajax({
-                      type: "POST",
-                      url: "post_form.php",
-                      data: formData,
-                      contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
-                      processData: false, // NEEDED, DON'T OMIT THIS
-                      success: function(response)
-                      {
-                        //Reseteo         
-                        $("#firstname").val('');
-                        $("#phone").val('');
-                        $("#email").val('') ;
-                      }
-                    });
+                    // ACA SE REGISTRA EN LA BASE, SE DEJA COMENTADO PARA QUE NO ROMPA, SEGUN AMBIENTE
+                    // $.ajax({
+                    //   type: "POST",
+                    //   url: "post_form.html",
+                    //   data: formData,
+                    //   contentType: false, // NEEDED, DON'T OMIT THIS (requires jQuery 1.6+)
+                    //   processData: false, // NEEDED, DON'T OMIT THIS
+                    //   success: function(response)
+                    //   {
+                    //     //Reseteo         
+                    //     $("#firstname").val('');
+                    //     $("#phone").val('');
+                    //     $("#email").val('') ;
+                    //     console.log(countryName);
+                    //   }
+                    // });
+                    $("#firstname").val('');
+                    $("#phone").val('');
+                    $("#email").val('') ;
+                    if (countryName==='PERU'){
+                        window.setTimeout( window.location.href = 'gracias_pe.html', 4000 ); 
+                    } else {
+                        if (countryName==='MEXICO'){
+                            window.setTimeout( window.location.href = 'gracias_mx.html', 4000 ); 
+                        } else {
+                            window.setTimeout( window.location.href = 'gracias_es.html', 4000 ); 
+                        }
+                    }
             }
         }
 
