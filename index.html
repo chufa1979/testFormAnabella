@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Test</title>
+      <!-- CSS only -->
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css	">
+      <link rel="stylesheet" href="css/style.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+      <script src="js/index.js"></script>
+      <script src="js/country.js"></script>
+      <script src="js/privacy.js"></script>
+   </head>
+   <body>
+      <!-- MultiStep Form -->
+      <div class="container-fluid" id="grad1">
+         <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+               <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                  <h2><strong>Test for Anabella</strong></h2>
+                  <h2 id="price"></h2>
+                  <div class="row">
+                     <div class="col-md-12 mx-0">
+                        <form id="msform">
+                           <ul id="progressbar">
+                              <li class="active" id="nameform"><strong>1 Step</strong></li>
+                              <li id="phoneform"><strong>2 Step</strong></li>
+                              <li id="emailform"><strong>3 Step</strong></li>
+                              <li id="confirm"><strong>Finish</strong></li>
+                           </ul>
+                           <fieldset>
+                              <div class="form-card">
+                                 <input type="text" class="form-control" name="firstname" id= "firstname" placeholder="Name"/>
+                                 <div class="invalid-feedback" id="errorname">
+                                    Please complete name
+                                 </div>
+                              </div>
+                              <input type="button" name="next" class="next action-button" id="step_1" value="Next Step" /> 
+                           </fieldset>
+                           <fieldset>
+                              <div class="form-card">
+                                 <input type="number" id="phone" name="phone" placeholder="Phone" /> 
+                                 <div class="invalid-feedback" id="errorphone1">
+                                    Please complete the phone
+                                 </div>
+                              </div>
+                              <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                              <input type="button" name="next" class="next action-button" id="step_2" value="Next Step" />
+                           </fieldset>
+                           <fieldset>
+                              <div class="form-card">
+                                 <input type="email" id="email" name="email" placeholder="Email Id" />
+                                 <div class="invalid-feedback" id="erroremail">
+                                    Please complete the valid email
+                                 </div>
+                              </div>
+                              <input type="button" name="previous" class="previous action-button-previous" value="Previous" />
+                              <input type="button" name="make_payment" class="next action-button" id="step_3" value="Confirm" />
+                           </fieldset>
+                           <fieldset>
+                              <div class="form-card">
+                                 <h2 class="fs-title text-center">Success!</h2>
+                                 <br><br>
+                              </div>
+                           </fieldset>
+                           <div><a href="javascript:void();" data-toggle="modal" data-target="#exampleModal">Privacy policies</a></div>
+                        </form>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- Modal Privacy policies -->
+      <div class="modal fade" id="exampleModalcookies" tabindex="-1" role="dialog" aria-labelledby="exampleModalcookiesLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+           <div class="modal-content">
+              <div class="modal-header">
+                 <h5 class="modal-title" id="exampleModalcookiesLabel">Privacy policies</h5>
+                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                 <span aria-hidden="true">&times;</span>
+                 </button>
+              </div>
+              <div class="modal-body">
+                Éste sitio web usa cookies, si permanece aquí acepta su uso.
+                Puede leer más sobre el uso de cookies en nuestra <a href="politica.html">política de privacidad</a>.              </div>
+              <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Accept</button>
+              </div>
+           </div>
+        </div>
+     </div>
+      <!-- Modal Privacy policies -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+         <div class="modal-dialog" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Privacy policies</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
